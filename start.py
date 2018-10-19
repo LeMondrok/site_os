@@ -5,8 +5,7 @@ from flask import Flask, render_template, redirect, url_for, request
 
 app = Flask(__name__)
 
-Messages = namedtuple('Messag'
-                      'e', 'text tag')
+Messages = namedtuple('Message', 'text tag')
 messages = []
 
 
@@ -17,7 +16,7 @@ def hello_world():
 
 @app.route('/lul', methods=['GET'])
 def main():
-    return render_template('main.html', messages = messages)
+    return render_template('main.html', messages=messages)
 
 
 @app.route('/add_message', methods=['POST'])
