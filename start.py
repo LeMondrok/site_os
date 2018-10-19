@@ -8,6 +8,9 @@ app = Flask(__name__)
 Message = namedtuple('Message', 'text tag')
 messages = []
 
+if __name__ == '__main__':
+    app.run()
+
 
 @app.route('/', methods=['GET'])
 def hello_world():
