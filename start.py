@@ -5,7 +5,8 @@ from flask import Flask, render_template, redirect, url_for, request
 
 app = Flask(__name__)
 
-Messages = namedtuple('Message', 'text tag')
+Messages = namedtuple('Messag'
+                      'e', 'text tag')
 messages = []
 
 
