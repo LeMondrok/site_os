@@ -1,4 +1,5 @@
 from collections import namedtuple
+import json
 
 from flask import Flask, render_template, redirect, url_for, request
 
@@ -27,3 +28,10 @@ def add_message():
     messages.append(Message(text, tag))
 
     return redirect(url_for('main'))
+
+
+@app.route('/json/kek', methods=['GET'])
+def reJSON():
+    #stringa = '{"key":["python", "py", 2]}'
+    #jsonDate = json.loads(stringa)
+    return (json.dumps([1,2,3,{'4': 5, '6': 7}], separators=(',', ':')))
