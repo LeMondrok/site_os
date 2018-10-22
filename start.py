@@ -34,4 +34,4 @@ def add_message():
 def reJSON():
     #stringa = '{"key":["python", "py", 2]}'
     #jsonDate = json.loads(stringa)
-    return (json.dumps([1,2,3,{'4': 5, '6': 7}], separators=(',', ':')))
+    return (json.dumps({'4': 5, '6': 7}, sort_keys=True, indent=4))
